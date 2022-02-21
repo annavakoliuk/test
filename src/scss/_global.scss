@@ -1,0 +1,124 @@
+
+// Layout
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-global;
+    font-family: $font;
+    font-weight: $font-weight-global;
+    color: $black-1;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: $black-1;
+}
+
+.container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include breakpoint('sm') {
+        padding: 0 16px;
+    }
+}
+
+h1, h2, h3, h4, p{
+    padding: 0;
+    margin: 0;
+}
+
+//текст параграфів
+
+.text-holder {
+    color: $black-2;
+}
+
+
+/* ЗАГОЛОВКИ
+
+для заголовків прописуємо клас у вигляді class="heading heading_h-1" (цифра в кінці від заголовка залежить), типу як блок і модифіктор
+*/
+
+//загальний клас для заголовків
+.heading {
+    font-weight: $font-weight-global;
+}
+
+//h1 в hero section
+.heading_h-1 {                      
+    font-size: $font-size-h1-m;
+    line-height: $line-height-h1-m;
+
+    @include breakpoint('sm') {
+        padding: 0 16px;
+    }
+}
+
+//h2 - у другій секції (після hero)
+.heading_h-2 {
+    font-size: $font-size-h2;
+    line-height: $line-height-h2;
+
+    @include breakpoint('sm') {
+        font-size: $font-size-h2-m;
+        line-height: $line-height-h2-m;
+    }
+}
+
+//h3 - тайтли секцій
+.heading_h-3 {
+    font-size: $font-size-h3;
+    line-height: $line-height-h3;
+    letter-spacing: $letter-spacing-h3;
+    text-transform: uppercase;
+}
+
+//h4 - секція преміум офер, і секція sign up
+.heading_h-4 {
+    font-size: $font-size-h4;
+    line-height: $line-height-h4;
+
+    @include breakpoint('sm') {
+        font-size: $font-size-h4-m;
+        line-height: $line-height-h4-m;
+    }
+}
+
+
+/* Кнопки
+
+для кнопок прописуємо клас у вигляді class="btn" - для білих, і class="btn btn_black" - для чорних. 
+В секції hero кнопці окремо у файлі секції додати font-weight: 700
+В секції sign up - паддінги інші прописати по ситуації
+*/
+
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color:$white;
+    text-decoration: none;
+    font-size: $font-size-capitalized;
+    line-height: $line-height-capitalized;
+    letter-spacing: $letter-spacing-capitalized;
+    text-transform: uppercase;
+}
+
+.btn_black{
+    color: $white;
+    background-color: $black-1;
+}
