@@ -1,0 +1,170 @@
+@import 'var';
+
+// Це краще перемістити в глобал-----------------
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    &_flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+// ----------------------------------
+
+.cup-card {
+    width: 49%;
+    text-align: center;
+
+    @include breakpoint(xs) {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    &_small {
+        width: 32%;
+        margin-bottom: 65px;
+
+        @include breakpoint(md) {
+            width: 46%;
+        }
+
+        @include breakpoint(xs) {
+            width: 100%;
+        }
+    }
+
+    &__img-holder {
+        margin-bottom: 35px;
+    }
+
+    &__name {
+        font-weight: $font-weight-global;
+        display: block;
+        font-size: $font-size-card-title;
+        line-height: $line-height-card-title;
+        margin-bottom: 5px;
+    }
+
+    &__price {
+        color: $black-2;
+
+        &_red {
+            color: $brown;
+        }
+
+        &_crossed {
+            text-decoration: line-through;
+            color: $black-3;
+        }
+    }
+}
+
+.promo {
+    color: $white;
+    text-align: center;
+    background-color: #050827;
+    margin-bottom: 123px;
+
+		&__text-holder {
+		}
+
+		&__subtitle {
+            display: inline-block;
+            font-size: $font-size-capitalized;
+            line-height: $line-height-capitalized;
+            letter-spacing: $letter-spacing-capitalized;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+		}
+
+		&__title {
+            margin-bottom: 10px;
+		}
+
+        &__text {
+            display: inline-block;
+            font-size: 17px;
+            line-height: 30px;
+            margin-bottom: 38px;
+        }
+
+		&__btn {
+            color: $black-1;
+            font-weight: bold;
+		}
+
+        .container {
+            padding: 159px 0 172px;
+            background-image: url("../image/hero-background.png");
+            background-size: cover;
+            background-position: center top;
+        }
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 98px;
+
+		&__text-holder {
+            max-width: 660px;
+            margin: 0 auto;
+
+            p {
+                line-height: 28px;
+                color: $black-2;
+            }
+		}
+
+		&__title {
+            font-weight: normal;
+            color: $black-1;
+		}
+
+		&__link {
+            font-size: 15px;
+            padding-bottom: 5px;
+            line-height: 28px;
+            color: $brown;
+            border-bottom: 2px solid $light-brown;
+		}
+}
+
+.featured {
+    margin-bottom: 115px;
+
+    @include breakpoint(mb) {
+        margin-bottom: 100px;
+    }
+
+    &__title {
+        font-weight: normal;
+        color: $black-1;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 100px;
+
+        @include breakpoint(xs) {
+            margin-bottom: 80px;
+        }
+    }
+}
+
+.products {
+
+    &__title {
+        font-weight: normal;
+        color: $black-1;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 100px;
+
+        @include breakpoint(xs) {
+            margin-bottom: 80px;
+        }
+    }
+}

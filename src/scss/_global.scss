@@ -16,18 +16,13 @@ body {
     color: $black-1;
 }
 
-h1, h2, h3, h4 {
-    padding: 0;
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
 img {
     width: 100%;
     display: block;
+}
+
+h1,h2,h3,h4 {
+    margin: 0;
 }
 
 .container {
@@ -85,7 +80,6 @@ img {
     font-size: $font-size-h3;
     line-height: $line-height-h3;
     letter-spacing: $letter-spacing-h3;
-    text-transform: uppercase;
 }
 
 //h4 - секція преміум офер, і секція sign up
